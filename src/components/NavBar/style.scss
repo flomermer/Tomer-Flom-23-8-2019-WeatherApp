@@ -1,0 +1,17 @@
+.NavBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+
+  & .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & > a{
+      padding: 0px 5px;
+      color: var(--nav-color);
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.App {
+  margin: 0;
+  & .NavBar{padding: 10px;}
+  & main{padding: 10px;}
+
+ --backgroundColor: red;
+ --textColor: '';
+ --navColor:  '';
+
+ min-height: 100vh;
+ background-color: var(--backgroundColor);
+ color: var(--textColor);
+}
