@@ -12,17 +12,13 @@ const NavBar = ({className, theme, toggleTheme}) => {
       <div className='title'>Herolu Weather Tutorial</div>
       <div><Icon icon={theme==='light' ? 'toggle-off' : 'toggle-on'} size='2x' onClick={() => toggleTheme(theme)} /></div>
       <div className='links'>
-        <NavLink to="/">Home</NavLink>
+        <NavLink exact to="/">Home</NavLink>
         <NavLink to="/favourites">Favourites</NavLink>
       </div>
     </div>
   )
 }
-function mapStateToProps({theme}){
-  return {theme};
-}
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({toggleTheme}, dispatch);
-}
+const mapStateToProps = ({theme}) => ({theme});
+const mapDispatchToProps = (dispatch) => (bindActionCreators({toggleTheme}, dispatch));
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBar);

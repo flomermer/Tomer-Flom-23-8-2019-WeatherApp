@@ -1,7 +1,7 @@
 .App {
   margin: 0;
   & .NavBar{padding: 10px;}
-  & main{padding: 10px;}
+  & main{padding: 10px; margin-top: 10px;}
 
  --backgroundColor: red;
  --textColor: '';

@@ -32,7 +32,6 @@ class Theme extends Component{
   }
 }
 
-function mapStateToProps({theme}){
-  return {theme};
-}
+const mapStateToProps = ({theme}) => ({theme});
+
 export default connect(mapStateToProps)(Theme);

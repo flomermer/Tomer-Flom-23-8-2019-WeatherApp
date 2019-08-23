@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #eee;
 
   & .links{
@@ -12,6 +13,12 @@
       padding: 0px 5px;
       color: var(--nav-color);
       text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &.active{
+        font-weight: bold;
+      }
     }
   }
 }

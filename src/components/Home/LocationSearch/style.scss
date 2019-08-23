@@ -1,0 +1,11 @@
+.LocationSearch{
+  & .autocomplete{
+    & .location{
+      cursor: pointer;
+      margin-top: 10px;
+      &:hover{
+        font-weight: bold;
+      }
+    }
+  }
+}
