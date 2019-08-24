@@ -1,11 +1,10 @@
 .Home{
+  width: 70%;
+  margin: 0 auto;
   & header{
       display: flex;
       flex-direction: row;
       justify-content: center;
-
-      & .LocationSearch{
-        width: 60%;        
-      }
+      & .LocationSearch{width: 100%;}
   }
 }

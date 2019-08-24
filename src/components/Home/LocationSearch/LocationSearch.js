@@ -17,9 +17,14 @@ class LocationSearch extends Component{
     this.renderAutoComplete   =     this.renderAutoComplete.bind(this);
     this.pickLocation         =     this.pickLocation.bind(this);
   }
+  componentDidMount(){
+    this.autocomplete = _.debounce(function() { //debounce the fetch() while searching a city
+      this.fetchLocations();
+    }, 500);
+  }
   onChange(e){
     e.preventDefault();
-    this.setState({keyword: e.target.value}, this.fetchLocations);
+    this.setState({keyword: e.target.value}, this.autocomplete);
   }
   async fetchLocations(){
     const {keyword} = this.state;

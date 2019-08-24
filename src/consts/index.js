@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const ROOT_API_URL  =   'http://dataservice.accuweather.com';
-const API_KEY       =   'kB8ZuEIOQq5aYWdXJPGDwIL1dplfnP4x';
+const API_KEY       =   'AkF9rj5fVApizb2QavGYcQWfTMDP6bRR';
 
 const API_CALL = (verb, path, data) => {
   return new Promise((resolve, reject) => {

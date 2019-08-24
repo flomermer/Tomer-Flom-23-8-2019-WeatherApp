@@ -1,14 +1,14 @@
 import { combineReducers }    from 'redux';
 import theme      from './theme';
 import favourites from './favourites';
-import keyword    from './keyword';
 import city       from './city';
+import unit       from './unit';
 
 const rootReducer = combineReducers({
     favourites,
     theme,
-    keyword,
-    city
+    city,
+    unit
 });
 
 export default rootReducer;

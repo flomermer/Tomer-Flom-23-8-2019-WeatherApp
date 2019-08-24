@@ -8,9 +8,9 @@ const themes = {
     navColor: '#0033a9'
   },
   dark: {
-    backgroundColor: '#0f0f0a',
-    textColor: 'blue',
-    navColor: 'blue'
+    backgroundColor: '#0033a9',
+    textColor: '#f8f8f8',
+    navColor: '#f8f8f8'
   }
 }
 class Theme extends Component{

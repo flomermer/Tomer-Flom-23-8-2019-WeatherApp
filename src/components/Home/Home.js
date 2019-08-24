@@ -18,15 +18,17 @@ class Home extends Component{
       this.fetchWeather();
   }
   componentDidUpdate(prevProps){
-    if(prevProps.city!==this.props.city && this.props.city && this.props.city.id)
+    if((prevProps.city!==this.props.city && this.props.city && this.props.city.id) || (prevProps.unit && prevProps.unit!==this.props.unit))
       this.fetchWeather();
   }
   async fetchWeather(){
-    const {city} = this.props;
-    console.log(`fetch weather to: ${city.name} - ${city.id}`);
+    const {city, unit} = this.props;
     try{
-      let curr_weather  =   await API_CALL('GET', `currentconditions/v1/${city.id}?details=false`);
-      let forecast      =   await API_CALL('GET', `forecasts/v1/daily/5day/${city.id}?details=false&metric=true`);
+      let curr_weather    =   await API_CALL('GET', `currentconditions/v1/${city.id}?details=false`);
+      let forecast        =   await API_CALL('GET', `forecasts/v1/daily/5day/${city.id}?details=false&metric=${unit==='C' ? 'true' : 'false'}`);
+      // const forecast      =   forecastDefault;
+      // const curr_weather  =   weatherDefault;
+
       this.setState({curr_weather: curr_weather[0], forecast});
     }catch(e){console.log(e.message);}
   }
@@ -44,6 +46,6 @@ class Home extends Component{
     );
   }
 }
-const mapStateToProps = ({city}) => ({city});
+const mapStateToProps = ({city, unit}) => ({city, unit});
 
 export default connect(mapStateToProps)(Home);

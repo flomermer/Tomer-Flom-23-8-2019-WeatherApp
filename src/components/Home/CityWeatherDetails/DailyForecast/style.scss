@@ -1,0 +1,7 @@
+.DailyForecast{
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--textColor);
+  & .day{font-weight: bold;}
+  & .icon{margin: 10px 0px;}
+}

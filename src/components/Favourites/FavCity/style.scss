@@ -1,0 +1,13 @@
+.FavCity{
+  text-align: center;
+  border: 1px solid var(--textColor);
+
+  & header{
+    font-weight: bold;
+  }
+  & main {
+    & .icon{
+      margin: 10px 0px;
+    }
+  }
+}

@@ -4,7 +4,19 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
-
+  & .options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & .theme{margin-right: 15px;}
+    & .unit{
+      font-size: 1.3em;
+      &:hover{
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
   & .links{
     display: flex;
     flex-direction: row;
