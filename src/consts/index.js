@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const ROOT_API_URL  =   'http://dataservice.accuweather.com';
+const ROOT_API_URL  =   'https://dataservice.accuweather.com';
 const API_KEY       =   'AkF9rj5fVApizb2QavGYcQWfTMDP6bRR';
 
 const API_CALL = (verb, path, data) => {
