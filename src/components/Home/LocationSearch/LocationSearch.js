@@ -24,7 +24,11 @@ class LocationSearch extends Component{
   }
   onChange(e){
     e.preventDefault();
-    this.setState({keyword: e.target.value}, this.autocomplete);
+    const {value} = e.target;
+    if(value && value.match(/[^A-Za-z ]/ig)) //check if english only
+      return false;
+
+    this.setState({keyword: value}, this.autocomplete);
   }
   async fetchLocations(){
     const {keyword} = this.state;
@@ -63,7 +67,8 @@ class LocationSearch extends Component{
       <form className={`LocationSearch ${className}`} onSubmit={onSubmit}>
         <input type='text' className='form-control'
                value={keyword} onChange={this.onChange}
-               placeholder="Search by city name..." />
+               placeholder="Search by city name..."
+        />
         <div className='autocomplete'>
           {this.renderAutoComplete()}
         </div>
